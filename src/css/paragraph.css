@@ -1,0 +1,61 @@
+
+
+div.hide {
+  position: relative;
+   -webkit-animation: hide  2s 1;
+   animation: hide  2s 1;
+   animation-fill-mode: forwards;
+}
+
+div.show {
+  position: relative;
+   -webkit-animation: show 2s 1;
+   animation: show 2s 1;
+   animation-fill-mode: forwards;
+}
+
+
+/*Text dissappear*/
+@keyframes hide {
+  0% {
+    color: gray;
+    opacity: .9;
+  }
+  100% {
+    color: white;
+    opacity: .1;
+  }
+}
+
+@-webkit-keyframes hide {
+  0% {
+    color: gray;
+    opacity: .9;
+  }
+  100% {
+    color: white;
+    opacity: .1;
+  }
+}
+
+@keyframes show {
+  0% {
+    color: white;
+    opacity: .1;
+ }
+  100% {
+    color: gray;
+    opacity: .9;
+  }
+}
+
+@-webkit-keyframes show {
+  0% {
+    color: white;
+    opacity: .1;
+ }
+  100% {
+    color: gray;
+    opacity: .9;
+  }
+}

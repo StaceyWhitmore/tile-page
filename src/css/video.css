@@ -1,3 +1,62 @@
+
+button.expand {
+  position: relative;
+   -webkit-animation: expand 2s 1;
+   animation: expand 2s 1;
+   animation-fill-mode: forwards;
+}
+button.shrink {
+  position: relative;
+   -webkit-animation: shrink 2s 1;
+   animation: shrink 2s 1;
+   animation-fill-mode: forwards;
+}
+a:hover {
+  cursor: crosshair;
+}
+
+
+/*
+translate(5vw, 5vh)
+translate(5vw, 5vh)
+*/
+
+@-webkit-keyframes expand {
+	0% {transform: scale(1) translate(1vw, 1vh);}
+  100% {align-items: center; position: absolute; transform: scale(1.5) ;}
+}
+
+@keyframes expand {
+	0% {transform: scale(1) translate(1vw, 1vh);}
+  100% {align-items: center;position: absolute; transform: scale(1.5) ;}
+}
+
+@-webkit-keyframes shrink {
+    0% {position: absolute; transform: scale(2) translate(20vw, 20vh);}
+	100% {transform: scale(1) translate(1vw, 1vh);}
+}
+
+@keyframes shrink {
+    0% {position: absolute; transform: scale(2) translate(20vw, 20vh);}
+	100% {transform: scale(1) translate(1vw, 1vh);}
+}
+
+
+
+/***EXPAND*****/
+/*
+#expandingVideo.expand {
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+  position: absolute;
+  transform: scale(2) translate(20vw, 20vh);
+  -webkit-transform: scale(2) translate(20vw, 20vh);
+}
+*/
+
+
 /*
 .video {
   animation-duration: 1s;
@@ -5,12 +64,14 @@
   animation-fill-mode: forwards;
 }
 */
-/***SHRINK*****/
 
+/***SHRINK*****/
+/*
 #expandingVideo:hover {
   cursor: pointer;
 }
-
+*/
+/*
 #expandingVideo.shrink {
   animation-duration: 1s;
   animation-timing-function: ease;
@@ -22,54 +83,5 @@
 
   transform: scale(1) translate(1vw, 1vh);
   -webkit-transform: scale(1) translate(1vw, 1vh);
-}
-/*
-@-webkit-keyframes
-shrink {
-    0% {position: absolute; transform: scale(2) translate(20vw, 20vh);}
-	100% {transform: scale(1) translate(1vw, 1vh);}
-}
-
-@keyframes
-shrink {
-    0% {position: absolute; transform: scale(2) translate(20vw, 20vh);}
-	100% {transform: scale(1) translate(1vw, 1vh);}
-}
-*/
-
-/***EXPAND*****/
-#expandingVideo.expand {
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-
-  position: absolute;
-  transform: scale(2) translate(20vw, 20vh);
-  -webkit-transform: scale(2) translate(20vw, 20vh);
-}
-/*
-@-webkit-keyframes expand {
-	0% {transform: scale(1) translate(1vw, 1vh);}
-  100% {position: absolute; transform: scale(2) translate(20vw, 20vh);}
-}
-
-@keyframes expand {
-	0% {transform: scale(1) translate(1vw, 1vh);}
-  100% {position: absolute; transform: scale(2) translate(20vw, 20vh);}
-}
-*/
-
-
-
-/*
-@keyframes disappear {
-  0% {
-    color: gray;
-    opacity: .9;
-  }
-  100% {
-    color: white;
-    opacity: .1;
-  }
 }
 */

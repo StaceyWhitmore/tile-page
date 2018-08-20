@@ -1,10 +1,32 @@
+
+/*
+Video {
+  background-color: orange;
+  position: relative;
+   -webkit-animation: expand 5s 1;
+   animation: expand 5s 1;
+   animation-fill-mode: forwards;
+}
+*/
+
+
+
+@-webkit-keyframes expand {
+	0% {transform: scale(1) translate(1vw, 1vh);}
+  100% {position: absolute; transform: translate(45vw, 30vh) scale(2);}
+}
+
+@keyframes expand {
+	0% {transform: scale(1) translate(1vw, 1vh);}
+  100% {position: absolute; transform: translate(45vw, 30vh) scale(2);}
+}
+
 .paragraph {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   font-size: 10px;
   /*
 -webkit-animation: disappear 1s;
-webkit-animation-fill-mode: forwards;
 */
 }
 
