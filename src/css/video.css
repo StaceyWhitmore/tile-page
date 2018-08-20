@@ -51,12 +51,12 @@ SHRINK 0%
 
 @-webkit-keyframes expand {
 	0% {transform: scale(1) translate(1vw, 1vh);}
-  100% {align-items: center;  transform: scale(2) translate(10vw, 10vh);}
+  100% {align-items: center;  transform: scale(3) translate(10vw, 10vh);}
 }
 
 @keyframes expand {
 	0% {transform: scale(1) translate(1vw, 1vh) ;}
-  100% {align-items: center; transform: scale(2) translate(10vw, 10vh);}
+  100% {align-items: center; transform: scale(3) translate(10vw, 10vh);}
 }
 
 @-webkit-keyframes shrink {

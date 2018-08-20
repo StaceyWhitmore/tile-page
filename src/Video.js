@@ -68,7 +68,7 @@ class Video extends Component {
           frameBorder="0"
           allowFullScreen>
       </iframe>
-        {this.renderUpperText()}
+      {this.renderUpperText()}
       </button>
     </div>
 

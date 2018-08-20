@@ -76,9 +76,11 @@ class Tile extends Component {
     var flexContainerStyle = {
       display: 'flex',
       flexWrap: 'wrap',
-      justifyContent: 'left',
-      flexDirection: 'row'
+      /*justifyContent: 'left',*/
+      flexDirection: 'column',
     }
+
+
     /*
     var upperText = {
       float: 'right'
