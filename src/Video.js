@@ -18,39 +18,41 @@ class Video extends Component {
       size = 'expand';
     }
 
-    /*
+
     var videoStyle = {
-      animationDuration: '1s';
-      animationTimingFunction: 'ease';
-      animationFillMode: 'forwards';
-    }*/
+      animationDuration: '1s',
+      animationTimingFunction: 'ease',
+      animationFillMode: 'forwards'
+    }
     /** add     style={videoStyle}   to comp*/
     /**
-    <iframe
-        onPlay={this.props.handlePlayEvent}
-        onPause={this.props.handlePlayEvent}
-
-        title="videoTitle"
-        id="ytplayer"
-        type="text/html"
-        width="280"
-        height="157"
-        src="https://www.youtube.com/embed/M7lc1UVf-VE"
-        frameBorder="0"
-        allowFullScreen
-        >
-   </iframe>
+    <video
+    width="280"
+    height="157"
+    onPlay={this.props.handlePlayEvent}
+    >
+   <source src="https://www.youtube.com/embed/M7lc1UVf-VE" type="videp/mp4" />
+         Your browswer does not support html5 video
+    </video>
     */
     return(
     <div id="expandingVideo" className={size}>
-         <video
-         width="280"
-         height="157"
-         onPlay={this.props.handlePlayEvent}
-         >
-        <source src="https://www.youtube.com/embed/M7lc1UVf-VE" type="videp/mp4" />
-              Your browswer does not support html5 video
-         </video>
+
+
+         <iframe
+             onPlay={this.props.handlePlayEvent}
+             onPause={this.props.handlePlayEvent}
+
+             title="videoTitle"
+             id="ytplayer"
+             type="text/html"
+             width="280"
+             height="157"
+             src="https://www.youtube.com/embed/M7lc1UVf-VE"
+             frameBorder="0"
+             allowFullScreen
+             >
+        </iframe>
      <h2> Video Title </h2>
     </div>
   );
