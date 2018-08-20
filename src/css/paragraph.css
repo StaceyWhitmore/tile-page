@@ -1,4 +1,10 @@
 
+#paragraph {
+    float: right;
+    padding: 10px;
+}
+
+
 
 div.hide {
   position: relative;

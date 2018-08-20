@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Video from './Video';
-import Paragraph from './Paragraph';
+//import UpperParagraph from './UpperParagraph';
+import UpperText from './UpperText';
+import LowerText from './LowerText'
 import './css/tile.css';
 //import ReactDOM from 'react-dom';
 
@@ -55,6 +57,19 @@ class Tile extends Component {
         expanded: !this.state.expanded
     });
   }
+
+  renderLower() {
+    if(this.state.expanded) {
+      return (
+        <LowerText paragraphVisibility={this.state.expanded}/>
+      );
+    } else {
+      return (
+        <div></div>
+      );
+    }
+  }
+
   render() {
     console.log('rendering: Tile Component')
 
@@ -64,6 +79,11 @@ class Tile extends Component {
       justifyContent: 'left',
       flexDirection: 'row'
     }
+    /*
+    var upperText = {
+      float: 'right'
+    }
+    */
 
     return(
       <div className="flexContainer" style={flexContainerStyle}>
@@ -71,8 +91,8 @@ class Tile extends Component {
           handleMouseDown={this.handleMouseDown}
           handlePlayEvent={this.handlePlayEvent}
           videoSize={this.state.expanded} />
-      <Paragraph
-          paragraphVisibility={this.state.expanded}/>
+          <br/><br/><br/>
+          {this.renderLower()}
       </div>
     );
   }

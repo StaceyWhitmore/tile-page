@@ -1,6 +1,29 @@
 
+
+
+
+
+
+
+/***EXPAND CONTRACT FUNCTIONALITY**********************************************/
+iframe.left {
+  float: left;
+  padding: 15px;
+  margin-right: 5px;
+  margin-bottom: 80px;
+}
+
+iframe.none {
+  padding: 15px;
+  margin-right: 5px;
+  margin-bottom: 80px;
+}
+
+
+
+
 button.expand {
-  position: relative;
+  position: relative; /*relative*/
    -webkit-animation: expand 2s 1;
    animation: expand 2s 1;
    animation-fill-mode: forwards;
@@ -17,30 +40,43 @@ a:hover {
 
 
 /*
-translate(5vw, 5vh)
-translate(5vw, 5vh)
+EXPAND  100% {  translate(5vw, 5vh)  }
+          0% { translate(1vw, 1vh) }
 */
+
+/*
+SHRINK 0%
+*/
+
 
 @-webkit-keyframes expand {
 	0% {transform: scale(1) translate(1vw, 1vh);}
-  100% {align-items: center; position: absolute; transform: scale(1.5) ;}
+  100% {align-items: center;  transform: scale(2) translate(10vw, 10vh);}
 }
 
 @keyframes expand {
-	0% {transform: scale(1) translate(1vw, 1vh);}
-  100% {align-items: center;position: absolute; transform: scale(1.5) ;}
+	0% {transform: scale(1) translate(1vw, 1vh) ;}
+  100% {align-items: center; transform: scale(2) translate(10vw, 10vh);}
 }
 
 @-webkit-keyframes shrink {
-    0% {position: absolute; transform: scale(2) translate(20vw, 20vh);}
-	100% {transform: scale(1) translate(1vw, 1vh);}
+    0% {transform: scale(2) translate(10vw, 10vh);}
+	100% {transform: scale(1) ;}
 }
 
 @keyframes shrink {
-    0% {position: absolute; transform: scale(2) translate(20vw, 20vh);}
-	100% {transform: scale(1) translate(1vw, 1vh);}
+    0% {transform: scale(2) translate(10vw, 10vh);}
+	100% {transform: scale(1);}
 }
 
+
+/*
+removed from shrink keyframe:
+translate(1vw, 1vh)
+translate(1vw, 1vh)
+
+
+*/
 
 
 /***EXPAND*****/

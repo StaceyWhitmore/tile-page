@@ -1,0 +1,19 @@
+.newsRelease {
+  margin-bottom: unset;
+  text-align: left;
+}
+.topTitle {
+  margin-top: unset;
+  margin-bottom: unset;
+  color: gray;
+  font-size: 40px;
+  text-align: left;
+  font-weight: 300;
+}
+
+.paragraph {
+  float:'right';
+  color: 'gray';
+  text-align: left;
+  /*flex-wrap: 'wrap';*/
+}

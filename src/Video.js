@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import UpperText from './UpperText';
+//import UpperParagraph from './UpperParagraph';
 import './css/video.css';
 
 class Video extends Component {
@@ -11,51 +13,65 @@ class Video extends Component {
     }
   }
   */
+
+  renderUpperText() {
+    if (!this.props.videoSize)  {
+      return (<UpperText />);
+
+
+    } else {
+      return(null);
+    }
+  }
+
+
+
+
+
   render() {
     console.log("Rendering: VideoComponent");
     var size = 'shrink';
+    var float = 'left';
+
     if (this.props.videoSize) {
       size = 'expand';
-    }
+      float = 'none';
 
+    }
     /*
-    var videoStyle = {
-      animationDuration: '1s',
-      animationTimingFunction: 'ease',
-      animationFillMode: 'forwards'
+    var visibility = 'show';
+    if (this.props.paragraphVisibility) {
+      visibility = 'hide'
     }
     */
 
+    var videoContainerStyle = {
+      padding: '20px',
+      position: 'relative'
+    }
 
-    /** add     style={videoStyle}   to comp*/
-    /**
-    <video
-    width="280"
-    height="157"
-    onPlay={this.props.handlePlayEvent}
-    >
-   <source src="https://www.youtube.com/embed/M7lc1UVf-VE" type="videp/mp4" />
-         Your browswer does not support html5 video
-    </video>
-    */
+
     return(
+    <div>
+      <button className={size} onClick={this.props.handleMouseDown} style={videoContainerStyle}>
 
-      <button className={size} onClick={this.props.handleMouseDown}>
-        <iframe
-            onPlay={this.props.handlePlayEvent}
-            onPause={this.props.handlePlayEvent}
-            title="videoTitle"
-            id="ytplayer"
-            type="text/html"
-            width="280"
-            height="157"
-            src="https://www.youtube.com/embed/M7lc1UVf-VE"
-            frameBorder="0"
-            allowFullScreen
-            >
-        </iframe>
-        <h2> Video Title </h2>
+      <iframe
+          className={float}
+          onPlay={this.props.handlePlayEvent}
+          onPause={this.props.handlePlayEvent}
+          title="videoTitle"
+          id="ytplayer"
+          type="text/html"
+          width="280"
+          height="157.5"
+          src="https://www.youtube.com/embed/jz9DVB42AA4"
+          frameBorder="0"
+          allowFullScreen>
+      </iframe>
+        {this.renderUpperText()}
       </button>
+    </div>
+
   );
   }
 }
